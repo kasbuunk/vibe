@@ -89,8 +89,6 @@
 - Chose PostgreSQL and Redis for data storage
 - Implemented OpenTelemetry with LGTM stack
 - Created comprehensive design philosophy document
-- Adopted Kubernetes-first approach
-- Using Kind for local development
 
 ### Development Tools
 - Added `check_pipeline.sh` script to monitor GitHub Actions status
@@ -98,7 +96,6 @@
 - Provides detailed status including workflow name, status, conclusion, and timestamps
 - Automatically shows failed jobs if a run fails
 - Helps maintain visibility into CI/CD pipeline status
-- Using Kind for local Kubernetes development
 
 ## Development Principles
 
