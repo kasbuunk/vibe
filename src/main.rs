@@ -1,23 +1,9 @@
-use axum::{routing::get, Router, response::Html};
-use tokio::net::TcpListener;
-use std::net::SocketAddr;
-
-pub async fn create_hello_server(_addr: SocketAddr) -> Router {
-    Router::new().route("/", get(hello))
-}
-
-async fn hello() -> Html<&'static str> {
-    Html("Hello, Vibe!")
-}
+use crate::agents::developer::DeveloperAgent;
 
 #[tokio::main]
 async fn main() {
-    let addr = "127.0.0.1:8080".parse().unwrap();
-    println!("Listening on {}", addr);
-    
-    let app = create_hello_server(addr).await;
-    let listener = TcpListener::bind(addr).await.unwrap();
-    axum::serve(listener, app).await.unwrap();
+    let agent = DeveloperAgent::new();
+    println!("DeveloperAgent created");
 }
 
 #[cfg(test)]
