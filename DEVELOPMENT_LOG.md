@@ -1,5 +1,15 @@
 # Vibe Development Log
 
+## Project Principles
+
+### User Feedback and Development Principles
+- **Test First**: Always write a failing test before implementing code
+- **Production Code Focus**: Test actual production code, not test implementations
+- **Immediate Verification**: Run tests after each change
+- **Conventional Commits**: Use `feat:`, `test:`, `docs:`, `ci:`, etc. prefixes
+- **Documentation**: Maintain comprehensive logs and README
+- **Learning**: Document decisions, lessons, and future considerations
+
 ## 2025-05-15
 
 ### 20:25 - Initial Project Setup
