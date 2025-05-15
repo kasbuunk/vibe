@@ -5,6 +5,7 @@
 ### 1. Technology Stack
 - **Primary Languages**: Rust (with functional programming influences)
 - **Cloud Native**: Embrace CNCF projects and cloud-native principles
+- **Kubernetes**: First-class citizen for deployment
 - **FOSS Only**: Exclusively use free and open-source software
 
 ### 2. Architecture
@@ -14,6 +15,164 @@
 - **Service Architecture**: gRPC for sync communication
 - **Data Storage**: PostgreSQL for relational data, Redis for state
 - **Observability**: OpenTelemetry with LGTM stack
+- **Kubernetes**: Native deployment and orchestration
+
+### 3. Development Practices
+- **TDD First**: Test-Driven Development for all components
+- **Testing Pyramid**: Unit tests > Integration tests > E2E tests
+- **Functional Approach**: Write Rust with Haskell influences
+- **Domain Modeling**: Inspired by Scott Wlaschin's Domain Modeling
+- **Clean Architecture**: Clear separation of concerns
+- **Kubernetes First**: Design for Kubernetes deployment
+
+### 4. Technology Preferences
+- **Preferred Languages**: Rust, Haskell (influences)
+- **Container Runtime**: Containerd
+- **Orchestration**: Kubernetes
+- **Rejected Technologies**:
+  - Java ecosystem
+  - PHP
+  - C/C++
+  - MongoDB
+
+### 5. Observability
+- **Tracing**: OpenTelemetry for distributed tracing
+- **Metrics**: Prometheus-compatible metrics
+- **Logging**: Structured logging with Loki
+- **Monitoring**: Grafana for visualization
+- **Kubernetes Metrics**: Kubernetes-native metrics
+
+### 6. Data Handling
+- **Event Sourcing**: Immutable event history
+- **CQRS**: Command Query Responsibility Segregation
+- **Serialization**: Protocol Buffers for data transfer
+- **RPC**: gRPC for command/query operations
+- **Events**: NATS JetStream for event streaming
+- **State Management**: PostgreSQL for relational data, Redis for ephemeral state
+- **Kubernetes State**: Leverage Kubernetes state management
+
+### 7. Development Style
+- **Functional Programming**: Embrace immutability and pure functions
+- **Domain-Driven Design**: Clear domain boundaries and bounded contexts
+- **Clean Code**: Maintainability and readability over premature optimization
+- **Incremental Development**: Evolve architecture as needed
+- **Testing Philosophy**: Fast, isolated unit tests at the base
+- **Kubernetes Development**: Use Kind for local development
+
+### 8. Infrastructure
+- **Containerization**: Kubernetes for orchestration
+- **CI/CD**: GitHub Actions for automation
+- **Version Control**: Git with conventional commits
+- **Documentation**: Comprehensive logging and development history
+- **Local Development**: Kind for Kubernetes development
+
+## Kubernetes Architecture
+
+### 1. Workload Design
+
+1. **Agent Deployments**
+   - Each agent as a Kubernetes deployment
+   - Horizontal scaling based on load
+   - Health checks and readiness probes
+   - Resource limits and requests
+
+2. **Service Communication**
+   - gRPC services for sync communication
+   - NATS JetStream for async communication
+   - Service discovery through Kubernetes DNS
+   - Load balancing with Kubernetes services
+
+3. **State Management**
+   - PostgreSQL StatefulSets
+   - Redis StatefulSets
+   - Persistent volumes for data
+   - ConfigMaps for configuration
+
+### 2. Event Infrastructure
+
+1. **NATS JetStream**
+   - NATS as a Kubernetes deployment
+   - JetStream for event persistence
+   - Streams for different event types
+   - Consumers for agent subscriptions
+
+2. **Event Processing**
+   - Event-driven scaling
+   - Consumer groups for load distribution
+   - Dead letter queues for failed events
+   - Event replay capabilities
+
+3. **Event Validation**
+   - Schema validation
+   - Event type safety
+   - Event versioning
+   - Event deduplication
+
+### 3. Development Environment
+
+1. **Local Development**
+   - Kind for local Kubernetes
+   - Local NATS cluster
+   - Local PostgreSQL
+   - Local Redis
+
+2. **CI/CD**
+   - GitHub Actions for CI
+   - Kubernetes deployment
+   - Automated testing
+   - Automated scaling
+
+3. **Testing**
+   - Kubernetes integration tests
+   - Load testing
+   - Chaos testing
+   - Recovery testing
+
+### 4. Deployment Patterns
+
+1. **Agent Deployment**
+   - Deployment for each agent
+   - Horizontal scaling
+   - Rolling updates
+   - Canary deployments
+
+2. **Service Deployment**
+   - gRPC services
+   - NATS services
+   - Database services
+   - Monitoring services
+
+3. **Stateful Services**
+   - StatefulSets for databases
+   - Persistent volumes
+   - Volume snapshots
+   - Backup and restore
+
+## Kubernetes Development Workflow
+
+1. **Local Development**
+   - Use Kind for local Kubernetes
+   - Develop and test locally
+   - Push images to registry
+   - Deploy to local cluster
+
+2. **CI/CD**
+   - Build and test in GitHub Actions
+   - Push images to registry
+   - Deploy to staging cluster
+   - Deploy to production cluster
+
+3. **Monitoring**
+   - Kubernetes metrics
+   - OpenTelemetry
+   - Loki logging
+   - Grafana dashboards
+
+4. **Scaling**
+   - Horizontal Pod Autoscaling
+   - Event-driven scaling
+   - Resource-based scaling
+   - Manual scaling
 
 ### 3. Development Practices
 - **TDD First**: Test-Driven Development for all components
