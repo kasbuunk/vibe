@@ -63,6 +63,13 @@
 
 ## Development Principles
 
+### Development Tools
+- Added `check_pipeline.sh` script to monitor GitHub Actions status
+- Script uses GitHub CLI to check workflow runs
+- Provides clear status feedback for active and completed runs
+
+## Development Principles
+
 1. **Test-Driven Development (TDD)**
    - Write failing tests first
    - Make tests pass
