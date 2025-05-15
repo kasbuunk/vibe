@@ -61,12 +61,30 @@
   - Includes build, test, and lint steps
   - Uses Ubuntu runner with latest Rust toolchain
 
+### 20:58 - Pipeline Monitoring
+- Added `check_pipeline.sh` script for monitoring GitHub Actions
+- Implemented detailed status reporting
+- Added GitHub CLI authentication to prerequisites
+- Script enhancements:
+  - Detailed workflow information
+  - Failed job reporting
+  - Timestamp tracking
+  - Active run detection
+
+### 21:07 - Development Process Evolution
+- Realized the project's true purpose is about learning to "vibe" with code
+- Updated README to reflect the learning journey focus
+- Documenting development process and principles as a key value
+- Shifted perspective from "HTTP server" to "code flow exploration"
+
 ## Development Principles
 
 ### Development Tools
 - Added `check_pipeline.sh` script to monitor GitHub Actions status
 - Script uses GitHub CLI to check workflow runs
-- Provides clear status feedback for active and completed runs
+- Provides detailed status including workflow name, status, conclusion, and timestamps
+- Automatically shows failed jobs if a run fails
+- Helps maintain visibility into CI/CD pipeline status
 
 ## Development Principles
 
