@@ -1,6 +1,17 @@
 # Vibe - A Journey into Code Flow
 
-This project is a living exploration of code flow and development rhythm. It's not just about building an HTTP server - it's about learning to "vibe" with code, working in harmony with tools and processes to create maintainable, well-documented software.
+A learning journey in software development, focusing on building an AI Agency ecosystem with Rust.
+
+## Documentation
+
+- [Design Philosophy](docs/design_philosophy.md)
+- [AI Agency Framework](docs/ai_agency.md)
+- [Development Roadmap](docs/roadmap.md)
+- [Development Log](DEVELOPMENT_LOG.md)
+
+## Project Overview
+
+Vibe is a project focused on learning and exploring modern software development practices through the lens of AI-driven development. The core concept is to create an ecosystem of AI agents that collaborate like a human software engineering team.
 
 ## Project Purpose
 
