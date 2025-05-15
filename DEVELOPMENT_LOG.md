@@ -83,6 +83,13 @@
 
 ## Development Principles
 
+### Design Philosophy
+- Adopted functional programming principles in Rust
+- Embraced CNCF technologies (Kubernetes, NATS, OpenTelemetry)
+- Chose PostgreSQL and Redis for data storage
+- Implemented OpenTelemetry with LGTM stack
+- Created comprehensive design philosophy document
+
 ### Development Tools
 - Added `check_pipeline.sh` script to monitor GitHub Actions status
 - Script uses GitHub CLI to check workflow runs
