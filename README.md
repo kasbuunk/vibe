@@ -22,8 +22,12 @@ The HTTP server is simply a vehicle for this exploration. The real value lies in
 
 ## Setup
 
-1. Install Rust and Cargo if you haven't already:
+1. Install prerequisites:
    ```bash
+   # Install GitHub CLI (using nix)
+   nix-env -iA nixpkgs.gh
+
+   # Install Rust and Cargo
    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
    ```
 
