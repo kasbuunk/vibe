@@ -7,14 +7,26 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-# Get the latest workflow run status
-status=$(gh run list --limit 1 --json conclusion --jq '.[0].conclusion')
+# Get detailed workflow run information
+run_info=$(gh run list --limit 1 --json status,conclusion,updatedAt,workflowName --jq '.[0]')
+status=$(echo $run_info | jq -r '.status')
+conclusion=$(echo $run_info | jq -r '.conclusion')
+updated_at=$(echo $run_info | jq -r '.updatedAt')
+workflow_name=$(echo $run_info | jq -r '.workflowName')
 
-# Print the status
-echo "Latest workflow status: $status"
+# Print detailed status information
+echo "Workflow: $workflow_name"
+echo "Status: $status"
+echo "Conclusion: $conclusion"
+echo "Last updated: $updated_at"
 
 # Check if there are any active runs
-active_runs=$(gh run list --limit 1 --json status --jq '.[0].status')
-if [ "$active_runs" = "in_progress" ]; then
-    echo "There is an active workflow run in progress"
+if [ "$status" = "in_progress" ]; then
+    echo "\nActive workflow run in progress"
+fi
+
+# Get any failed jobs if the run failed
+if [ "$conclusion" = "failure" ]; then
+    echo "\nFailed jobs:"
+    gh run list --limit 1 --json jobs --jq '.[0].jobs[] | select(.conclusion == "failure") | "\(.name) - \(.conclusion)"'
 fi
