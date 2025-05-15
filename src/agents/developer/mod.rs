@@ -2,6 +2,7 @@ use super::AgentMessage;
 use anyhow::Result;
 use tokio::sync::mpsc;
 use std::sync::Arc;
+use async_trait::async_trait;
 
 #[derive(Debug)]
 pub struct DeveloperAgent {
@@ -19,34 +20,40 @@ impl DeveloperAgent {
     }
 
     pub async fn write_failing_test(&self, test_name: &str) -> Result<()> {
-        // TODO: Implement test writing logic
+        // Create a simple failing test file
+        let test_content = format!(
+            "#[cfg(test)]\nmod tests {{\n    #[test]\n    fn {}() {{\n        assert_eq!(1 + 1, 3); // This test should fail\n    }}\n}}",
+            test_name
+        );
+        
+        std::fs::write(format!("tests/developer_agent_test.rs"), test_content)?;
         Ok(())
     }
 
     pub async fn implement_code(&self, task: &str) -> Result<()> {
-        // TODO: Implement code implementation logic
+        // TODO: Implement code implementation
         Ok(())
     }
 
     pub async fn run_tests(&self) -> Result<()> {
-        // TODO: Implement test running logic
+        // TODO: Implement test running
         Ok(())
     }
 
     pub async fn commit_changes(&self, message: &str) -> Result<()> {
-        // TODO: Implement commit logic
+        // TODO: Implement commit changes
         Ok(())
     }
 }
 
-#[async_trait::async_trait]
+#[async_trait]
 impl super::Agent for DeveloperAgent {
     fn name(&self) -> &'static str {
-        "developer_agent"
+        "DeveloperAgent"
     }
 
     fn role(&self) -> &'static str {
-        "Developer"
+        "Writes and implements tests"
     }
 
     async fn process_message(&self, message: AgentMessage) -> Result<(), anyhow::Error> {
@@ -84,7 +91,7 @@ impl DeveloperAgent {
     }
 
     async fn handle_knowledge_share(&self, topic: String, content: String) -> Result<()> {
-        // TODO: Implement knowledge sharing
+        // TODO: Implement knowledge share handling
         Ok(())
     }
 }

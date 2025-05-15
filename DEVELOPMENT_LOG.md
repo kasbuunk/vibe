@@ -100,10 +100,14 @@
 ## Development Principles
 
 1. **Test-Driven Development (TDD)**
-   - Write failing tests first
-   - Make tests pass
-   - Refactor if needed
-   - Repeat
+   - Write tests before implementation
+   - Tests should be small and focused
+   - Tests should be easy to understand and maintain
+   - Tests should verify business requirements
+   - **CRITICAL**: Only commit code changes if ALL tests pass
+     - This ensures code quality and maintainability
+     - Prevents breaking changes from being committed
+     - Maintains a clean git history
 
 2. **Code Quality**
    - Use conventional commit messages

@@ -3,6 +3,7 @@ pub mod developer;
 use std::sync::Arc;
 use tokio::sync::Mutex;
 use serde::{Serialize, Deserialize};
+use async_trait::async_trait;
 
 /// Base message type for agent communication
 #[derive(Debug, Serialize, Deserialize)]
@@ -14,6 +15,7 @@ pub enum AgentMessage {
 }
 
 /// Base trait for all agents
+#[async_trait]
 pub trait Agent {
     fn name(&self) -> &'static str;
     fn role(&self) -> &'static str;
