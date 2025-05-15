@@ -1,0 +1,65 @@
+```mermaid
+graph TD
+    subgraph AI Agency Core
+        A[Architect Agent]
+        D[Developer Agent]
+        T[Tester Agent]
+        DO[DevOps Agent]
+        DOC[Documenter Agent]
+        I[Introspector Agent]
+    end
+
+    subgraph Communication Layer
+        C[Communication Hub]
+        M[Message Queue]
+        S[State Store]
+    end
+
+    subgraph Development Environment
+        R[Repository]
+        CI[CI/CD Pipeline]
+        DOC[Documentation]
+        L[Logs]
+    end
+
+    A --> C
+    D --> C
+    T --> C
+    DO --> C
+    DOC --> C
+    I --> C
+
+    C --> M
+    C --> S
+
+    M --> A
+    M --> D
+    M --> T
+    M --> DO
+    M --> DOC
+    M --> I
+
+    S --> A
+    S --> D
+    S --> T
+    S --> DO
+    S --> DOC
+    S --> I
+
+    A --> R
+    D --> R
+    T --> R
+    DO --> CI
+    DOC --> DOC
+    I --> L
+
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style D fill:#bbf,stroke:#333,stroke-width:2px
+    style T fill:#bfb,stroke:#333,stroke-width:2px
+    style DO fill:#ffb,stroke:#333,stroke-width:2px
+    style DOC fill:#fbb,stroke:#333,stroke-width:2px
+    style I fill:#bfb,stroke:#333,stroke-width:2px
+    style C fill:#ddd,stroke:#333,stroke-width:2px
+    style M fill:#ddd,stroke:#333,stroke-width:2px
+    style S fill:#ddd,stroke:#333,stroke-width:2px
+```

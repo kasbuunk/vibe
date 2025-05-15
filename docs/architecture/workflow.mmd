@@ -1,0 +1,45 @@
+```mermaid
+graph TD
+    subgraph Development Workflow
+        A[Write Failing Test]
+        B[Implement Code]
+        C[Run Tests]
+        D[Commit Changes]
+        E[Push to CI]
+        F[Update Docs]
+        G[Introspect]
+    end
+
+    subgraph Agent Roles
+        T[Tester]
+        D[Developer]
+        DOC[Documenter]
+        I[Introspector]
+    end
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> A
+
+    T --> A
+    D --> B
+    D --> C
+    DOC --> F
+    I --> G
+
+    style A fill:#bbf,stroke:#333,stroke-width:2px
+    style B fill:#bbf,stroke:#333,stroke-width:2px
+    style C fill:#bbf,stroke:#333,stroke-width:2px
+    style D fill:#bbf,stroke:#333,stroke-width:2px
+    style E fill:#bbf,stroke:#333,stroke-width:2px
+    style F fill:#bbf,stroke:#333,stroke-width:2px
+    style G fill:#bbf,stroke:#333,stroke-width:2px
+    style T fill:#fbb,stroke:#333,stroke-width:2px
+    style D fill:#fbb,stroke:#333,stroke-width:2px
+    style DOC fill:#fbb,stroke:#333,stroke-width:2px
+    style I fill:#fbb,stroke:#333,stroke-width:2px
+```
