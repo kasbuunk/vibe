@@ -2,13 +2,19 @@
 
 ## Project Principles
 
-### User Feedback and Development Principles
-- **Test First**: Always write a failing test before implementing code
-- **Production Code Focus**: Test actual production code, not test implementations
-- **Immediate Verification**: Run tests after each change
-- **Conventional Commits**: Use `feat:`, `test:`, `docs:`, `ci:`, etc. prefixes
-- **Documentation**: Maintain comprehensive logs and README
-- **Learning**: Document decisions, lessons, and future considerations
+### Code Flow and Learning Principles
+- **Test First**: Write failing tests to understand the problem before solving it
+- **Flow Focus**: Work in harmony with development tools and processes
+- **Immediate Feedback**: Use tests and documentation to maintain flow
+- **Conventional Commits**: Use semantic prefixes to maintain project history
+- **Documentation**: Capture the learning journey through logs and README
+- **Learning**: Document decisions, lessons, and adapt principles as needed
+
+### Development Approach
+- The HTTP server is a vehicle for learning
+- Focus on the development process itself
+- Maintain transparency in decision-making
+- Document the journey of learning and adaptation
 
 ## 2025-05-15
 
