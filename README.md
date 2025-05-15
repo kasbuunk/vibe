@@ -1,4 +1,4 @@
-# Vibe - AI Agency Framework
+# Vibe - Self-Improving AI Agency Framework
 
 ## Mission
 
@@ -9,15 +9,25 @@ Vibe is an AI Agency framework where AI agents collaboratively develop software.
 3. **Self-Heal**: Detect and fix issues in their own code
 4. **Learn Continuously**: Improve their development practices over time
 
+## Self-Application Philosophy
+
+Vibe is designed to be both:
+
+1. **A Tool**: A framework for creating AI agency ecosystems
+2. **Self-Improving**: Continuously enhancing its own implementation
+3. **Self-Applied**: Using itself as a tool for development
+4. **Efficient**: Optimizing resource utilization in distributed environments
+
 ## Current Focus: Developer Agent
 
 The first step in this journey is the Developer Agent - an AI agent that:
 
-- Analyzes and understands the codebase
+- Analyzes and understands any codebase, including its own
 - Suggests and implements code changes
 - Maintains code quality through automated testing
 - Documents decisions and reasoning
 - Collaborates with other agents
+- Manages resource allocation in distributed environments
 
 ## Project Overview
 
