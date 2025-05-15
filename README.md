@@ -1,24 +1,43 @@
-# Vibe - A Journey into Code Flow
+# Vibe - AI Agency Framework
 
-A learning journey in software development, focusing on building an AI Agency ecosystem with Rust.
+## Mission
 
-## Documentation
+Vibe is an AI Agency framework where AI agents collaboratively develop software. The core vision is to create a self-evolving development ecosystem where AI agents:
 
-- [Design Philosophy](docs/design_philosophy.md)
-- [AI Agency Framework](docs/ai_agency.md)
-- [Development Roadmap](docs/roadmap.md)
-- [Development Log](DEVELOPMENT_LOG.md)
+1. **Self-Develop**: Write, modify, and improve their own code
+2. **Autonomously Decide**: Make architectural decisions through collaborative processes
+3. **Self-Heal**: Detect and fix issues in their own code
+4. **Learn Continuously**: Improve their development practices over time
+
+## Current Focus: Developer Agent
+
+The first step in this journey is the Developer Agent - an AI agent that:
+
+- Analyzes and understands the codebase
+- Suggests and implements code changes
+- Maintains code quality through automated testing
+- Documents decisions and reasoning
+- Collaborates with other agents
 
 ## Project Overview
 
-Vibe is a project focused on learning and exploring modern software development practices through the lens of AI-driven development. The core concept is to create an ecosystem of AI agents that collaborate like a human software engineering team.
+Vibe is not just a project, but a living, evolving ecosystem where AI agents:
+
+- Write and modify code
+- Make architectural decisions
+- Maintain code quality
+- Document their reasoning
+- Collaborate with each other
+- Learn from their experiences
 
 ## Project Purpose
 
 This repository serves as a living example of:
 
-- The development process itself
-- How we work with code
+- AI agents developing software autonomously
+- Collaborative decision-making processes
+- Self-evolving code architecture
+- Automated code quality maintenance
 - The principles that guide our decisions
 - The journey of learning and adaptation
 
