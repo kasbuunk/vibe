@@ -1,6 +1,17 @@
-# Vibe - A Simple Rust HTTP Server
+# Vibe - A Journey into Code Flow
 
-A minimal HTTP server built with Rust and Axum, following Test-Driven Development (TDD) principles.
+This project is a living exploration of code flow and development rhythm. It's not just about building an HTTP server - it's about learning to "vibe" with code, working in harmony with tools and processes to create maintainable, well-documented software.
+
+## Project Purpose
+
+This repository serves as a living example of:
+
+- The development process itself
+- How we work with code
+- The principles that guide our decisions
+- The journey of learning and adaptation
+
+The HTTP server is simply a vehicle for this exploration. The real value lies in the development log, principles, and documentation that capture our journey together.
 
 ## Features
 
