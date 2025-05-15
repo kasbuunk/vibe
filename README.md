@@ -27,6 +27,9 @@ The HTTP server is simply a vehicle for this exploration. The real value lies in
    # Install GitHub CLI (using nix)
    nix-env -iA nixpkgs.gh
 
+   # Authenticate GitHub CLI
+   gh auth login
+
    # Install Rust and Cargo
    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
    ```
