@@ -1,4 +1,4 @@
-# Vibe - Self-Improving AI Agency Framework
+# Vibe - Introspective AI Agency
 
 ## Mission
 
